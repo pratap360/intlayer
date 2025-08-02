@@ -10,7 +10,6 @@ import {
   useEffect,
   useState,
 } from 'react';
-import { ApplicationNotRunningView } from './ApplicationNotRunningView/ApplicationNotRunningView';
 import { CheckingApplicationStatusView } from './ChekingApplicationStatutView/ChekingApplicationStatutView';
 import { NoApplicationURLView } from './NoApplicationURLView/NoApplicationURLView';
 
@@ -73,9 +72,9 @@ export const EditorProvider: FC<PropsWithChildren<EditorProviderProps>> = ({
   }
 
   // Show application not running view if the application is not responding
-  if (!isApplicationRunning) {
-    return <ApplicationNotRunningView />;
-  }
+  // if (!isApplicationRunning) {
+  //   return <ApplicationNotRunningView />;
+  // }
 
   return (
     <EditorProviderComponent
