@@ -80,7 +80,7 @@ import { useI18n, IntlayerServerProvider } from "react.intlayer/server";
 import { Locales } from "intlayer";
 
 const App: FC<{ locale: Locales }> = ({ locale }) => {
-  const t = useI18n("homepage", locale);
+  const t = useI18n("home-page", locale);
 
   return (
     <>
@@ -102,7 +102,7 @@ import { IntlayerProvider } from "react-intlayer";
 import { IntlayerServerProvider, useI18n } from "react-intlayer/server";
 
 const App = ({ locale }) => {
-  const t = useI18n("homepage", locale);
+  const t = useI18n("home-page", locale);
 
   return (
     <>
@@ -123,7 +123,7 @@ const { IntlayerProvider } = require("react-intlayer");
 const { IntlayerServerProvider, useI18n } = require("react-intlayer/server");
 
 const App = ({ locale }) => {
-  const t = useI18n("homepage", locale);
+  const t = useI18n("home-page", locale);
 
   return (
     <>
@@ -235,8 +235,6 @@ const ServerComponentExample = () => {
 속성을 현지화할 때는 번역 값을 적절히 접근해야 합니다:
 
 ```jsx
-<button title={t("buttonTitle.value")}>{t("buttonText")}</button>
-
 <!-- 접근성 속성(예: aria-label)의 경우, 순수 문자열이 필요하므로 .value를 사용하세요 -->
 <button aria-label={t("button.ariaLabel").value}>{t("button.text")}</button>
 ```

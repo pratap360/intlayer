@@ -80,7 +80,7 @@ import { useI18n, IntlayerServerProvider } from "react-intlayer/server";
 import { Locales } from "intlayer";
 
 const App: FC<{ locale: Locales }> = ({ locale }) => {
-  const t = useI18n("homepage", locale);
+  const t = useI18n("home-page", locale);
 
   return (
     <>
@@ -102,7 +102,7 @@ import { IntlayerProvider } from "react-intlayer";
 import { IntlayerServerProvider, useI18n } from "react-intlayer/server";
 
 const App = ({ locale }) => {
-  const t = useI18n("homepage", locale);
+  const t = useI18n("home-page", locale);
 
   return (
     <>
@@ -123,7 +123,7 @@ const { IntlayerProvider } = require("react-intlayer");
 const { IntlayerServerProvider, useI18n } = require("react-intlayer/server");
 
 const App = ({ locale }) => {
-  const t = useI18n("homepage", locale);
+  const t = useI18n("home-page", locale);
 
   return (
     <>
@@ -235,8 +235,6 @@ const ServerComponentExample = () => {
 Al localizar atributos, accede a los valores de traducción de manera adecuada:
 
 ```jsx
-<button title={t("buttonTitle.value")}>{t("buttonText")}</button>
-
 <!-- Para atributos de accesibilidad (por ejemplo, aria-label), usa .value ya que se requieren cadenas puras -->
 <button aria-label={t("button.ariaLabel").value}>{t("button.text")}</button>
 ```

@@ -80,7 +80,7 @@ import { useI18n, IntlayerServerProvider } from "react-intlayer/server";
 import { Locales } from "intlayer";
 
 const App: FC<{ locale: Locales }> = ({ locale }) => {
-  const t = useI18n("homepage", locale);
+  const t = useI18n("home-page", locale);
 
   return (
     <>
@@ -102,7 +102,7 @@ import { IntlayerProvider } from "react-intlayer";
 import { IntlayerServerProvider, useI18n } from "react-intlayer/server";
 
 const App = ({ locale }) => {
-  const t = useI18n("homepage", locale);
+  const t = useI18n("home-page", locale);
 
   return (
     <>
@@ -123,7 +123,7 @@ const { IntlayerProvider } = require("react-intlayer");
 const { IntlayerServerProvider, useI18n } = require("react-intlayer/server");
 
 const App = ({ locale }) => {
-  const t = useI18n("homepage", locale);
+  const t = useI18n("home-page", locale);
 
   return (
     <>
@@ -235,8 +235,6 @@ const ServerComponentExample = () => {
 属性をローカライズする際は、翻訳値に適切にアクセスしてください：
 
 ```jsx
-<button title={t("buttonTitle.value")}>{t("buttonText")}</button>
-
 <!-- アクセシビリティ属性（例：aria-label）には、純粋な文字列が必要なため .value を使用します -->
 <button aria-label={t("button.ariaLabel").value}>{t("button.text")}</button>
 ```
